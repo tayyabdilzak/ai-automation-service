@@ -1,13 +1,19 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AI Automation Agency | Smart Business Automation</title>
+    <title>AI Automation Agency | Automate Your Business</title>
+
+    <meta name="description"
+        content="AI automation solutions for businesses. Automate customer support, lead collection, repetitive tasks and business workflows.">
+
+    <meta name="keywords"
+        content="AI automation, AI chatbot, business automation, WhatsApp automation, lead automation">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -25,13 +31,20 @@
             line-height: 1.6;
         }
 
+        a {
+            text-decoration: none;
+        }
+
+        /* HEADER */
+
         header {
             background: #0f172a;
             color: white;
-            padding: 20px 8%;
+            padding: 18px 7%;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
         }
 
         nav {
@@ -44,11 +57,15 @@
             font-size: 23px;
         }
 
+        nav h2 span {
+            color: #60a5fa;
+        }
+
         nav a {
             color: white;
-            text-decoration: none;
-            margin-left: 22px;
+            margin-left: 20px;
             font-weight: bold;
+            font-size: 14px;
         }
 
         nav a:hover {
@@ -58,23 +75,37 @@
         /* HERO */
 
         .hero {
-            min-height: 620px;
+            min-height: 650px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(135deg, #0f172a, #1d4ed8);
+            padding: 90px 20px;
+            background:
+                radial-gradient(circle at top right, #2563eb55, transparent 35%),
+                linear-gradient(135deg, #0f172a, #172554);
             color: white;
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 900px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #2563eb33;
+            border: 1px solid #60a5fa55;
+            color: #93c5fd;
+            padding: 8px 16px;
+            border-radius: 30px;
+            margin-bottom: 22px;
+            font-size: 14px;
+            font-weight: bold;
         }
 
         .hero h1 {
-            font-size: 58px;
-            line-height: 1.15;
+            font-size: 60px;
+            line-height: 1.1;
             margin-bottom: 25px;
         }
 
@@ -83,10 +114,10 @@
         }
 
         .hero p {
-            max-width: 700px;
+            max-width: 720px;
             margin: auto;
-            font-size: 20px;
-            color: #e5e7eb;
+            font-size: 19px;
+            color: #dbeafe;
         }
 
         .hero-buttons {
@@ -95,11 +126,11 @@
 
         .btn {
             display: inline-block;
-            padding: 15px 28px;
+            padding: 15px 27px;
             border-radius: 8px;
-            text-decoration: none;
             font-weight: bold;
-            margin: 7px;
+            margin: 6px;
+            transition: 0.3s;
         }
 
         .btn-primary {
@@ -109,6 +140,7 @@
 
         .btn-primary:hover {
             background: #16a34a;
+            transform: translateY(-2px);
         }
 
         .btn-secondary {
@@ -118,38 +150,43 @@
 
         .btn-secondary:hover {
             background: #e5e7eb;
+            transform: translateY(-2px);
+        }
+
+        .hero-note {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #bfdbfe;
         }
 
         /* GENERAL */
 
         section {
-            padding: 80px 8%;
+            padding: 85px 8%;
         }
 
         .title {
             text-align: center;
             font-size: 38px;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
         }
 
         .subtitle {
             text-align: center;
-            max-width: 700px;
+            max-width: 720px;
             margin: 0 auto 45px;
             color: #64748b;
             font-size: 17px;
         }
 
-        /* PROBLEM */
-
-        .problem-section {
-            background: white;
-        }
+        /* CARDS */
 
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
+            max-width: 1150px;
+            margin: auto;
         }
 
         .card {
@@ -158,21 +195,33 @@
             border-radius: 15px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.07);
             text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
         }
 
         .card-icon {
-            font-size: 38px;
+            font-size: 40px;
             margin-bottom: 15px;
         }
 
         .card h3 {
             color: #2563eb;
             margin-bottom: 12px;
-            font-size: 22px;
+            font-size: 21px;
         }
 
         .card p {
             color: #64748b;
+        }
+
+        /* PROBLEMS */
+
+        .problem-section {
+            background: white;
         }
 
         /* SERVICES */
@@ -181,12 +230,57 @@
             border-top: 4px solid #2563eb;
         }
 
+        /* AUDIT */
+
+        .audit {
+            background: #eef2ff;
+        }
+
+        .audit-box {
+            max-width: 950px;
+            margin: auto;
+            background: white;
+            padding: 45px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 8px 35px rgba(37,99,235,0.10);
+        }
+
+        .audit-box h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .audit-box p {
+            color: #64748b;
+            max-width: 700px;
+            margin: auto auto 25px;
+        }
+
+        .audit-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .audit-item {
+            background: #f1f5f9;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
         /* HOW IT WORKS */
 
         .steps {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
+            max-width: 1000px;
+            margin: auto;
         }
 
         .step {
@@ -195,8 +289,8 @@
         }
 
         .step-number {
-            width: 55px;
-            height: 55px;
+            width: 58px;
+            height: 58px;
             margin: 0 auto 20px;
             border-radius: 50%;
             background: #2563eb;
@@ -219,6 +313,11 @@
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .use-card:hover {
+            transform: translateY(-4px);
         }
 
         .use-card h3 {
@@ -226,7 +325,45 @@
             color: #1d4ed8;
         }
 
-        /* WHY US */
+        .use-card p {
+            color: #64748b;
+        }
+
+        /* DEMOS */
+
+        .demo {
+            background: white;
+        }
+
+        .demo-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .demo-card h3 {
+            color: #2563eb;
+            margin-bottom: 12px;
+        }
+
+        .demo-card p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .demo-label {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* WHY */
 
         .why {
             max-width: 850px;
@@ -271,6 +408,7 @@
 
         .card li {
             margin: 10px 0;
+            color: #475569;
         }
 
         .price-btn {
@@ -279,7 +417,6 @@
             color: white;
             padding: 12px 24px;
             border-radius: 7px;
-            text-decoration: none;
             font-weight: bold;
         }
 
@@ -324,7 +461,6 @@
         summary {
             cursor: pointer;
             font-weight: bold;
-            color: #172033;
         }
 
         details p {
@@ -376,7 +512,12 @@
             background: #0f172a;
             color: white;
             text-align: center;
-            padding: 30px;
+            padding: 35px 20px;
+        }
+
+        footer p {
+            margin: 5px;
+            color: #cbd5e1;
         }
 
         /* CHATBOT */
@@ -385,7 +526,7 @@
             position: fixed;
             right: 20px;
             bottom: 20px;
-            width: 320px;
+            width: 330px;
             background: white;
             border-radius: 15px;
             box-shadow: 0 5px 30px rgba(0,0,0,0.2);
@@ -400,11 +541,21 @@
             font-weight: bold;
         }
 
+        .chat-status {
+            font-size: 11px;
+            font-weight: normal;
+            opacity: 0.85;
+        }
+
         .chat-body {
-            height: 220px;
+            height: 230px;
             padding: 15px;
             overflow-y: auto;
             font-size: 14px;
+        }
+
+        .chat-body p {
+            margin-bottom: 12px;
         }
 
         .chat-input {
@@ -426,6 +577,25 @@
             cursor: pointer;
         }
 
+        /* FLOATING WHATSAPP */
+
+        .whatsapp {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #22c55e;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+            z-index: 1999;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
         /* MOBILE */
 
         @media (max-width: 768px) {
@@ -435,13 +605,17 @@
                 gap: 15px;
             }
 
+            nav div {
+                text-align: center;
+            }
+
             nav a {
-                margin: 0 7px;
-                font-size: 14px;
+                margin: 0 5px;
+                font-size: 13px;
             }
 
             .hero {
-                min-height: 550px;
+                min-height: 600px;
             }
 
             .hero h1 {
@@ -465,11 +639,25 @@
                 font-size: 30px;
             }
 
+            .audit-box {
+                padding: 30px 20px;
+            }
+
+            .audit-box h2 {
+                font-size: 28px;
+            }
+
             .chatbot {
-                width: 90%;
-                right: 5%;
+                width: 88%;
+                right: 6%;
+                bottom: 85px;
+            }
+
+            .whatsapp {
+                bottom: 20px;
             }
         }
+
     </style>
 </head>
 
@@ -478,19 +666,22 @@
 <!-- HEADER -->
 
 <header>
+
     <nav>
 
-        <h2>AI Automation Agency</h2>
+        <h2>AI <span>Automation</span></h2>
 
         <div>
             <a href="#services">Services</a>
             <a href="#how">How It Works</a>
+            <a href="#demos">Demos</a>
             <a href="#pricing">Pricing</a>
             <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
         </div>
 
     </nav>
+
 </header>
 
 
@@ -500,14 +691,18 @@
 
     <div class="hero-content">
 
+        <div class="badge">
+            ⚡ AI Automation for Modern Businesses
+        </div>
+
         <h1>
             Automate Your Business With
             <span>AI</span>
         </h1>
 
         <p>
-            We help businesses save time, respond to customers faster,
-            collect leads, and automate repetitive tasks with smart AI solutions.
+            We help businesses automate repetitive tasks, respond to
+            customers faster, collect leads and improve everyday workflows.
         </p>
 
         <div class="hero-buttons">
@@ -515,17 +710,22 @@
             <a
                 class="btn btn-primary"
                 href="https://wa.me/923193094040"
+                target="_blank"
             >
-                Get Free Consultation
+                💬 Get Free Consultation
             </a>
 
             <a
                 class="btn btn-secondary"
-                href="#services"
+                href="#audit"
             >
-                Explore Services
+                🔍 Free AI Audit
             </a>
 
+        </div>
+
+        <div class="hero-note">
+            No complicated process • Simple solutions • Custom requirements
         </div>
 
     </div>
@@ -540,34 +740,46 @@
     <h2 class="title">Are You Losing Time?</h2>
 
     <p class="subtitle">
-        Many businesses spend hours every day handling repetitive tasks
-        that can be automated.
+        Many businesses spend valuable time handling tasks that can be
+        simplified or automated.
     </p>
 
     <div class="cards">
 
         <div class="card">
+
             <div class="card-icon">💬</div>
+
             <h3>Too Many Messages</h3>
+
             <p>
                 Customers ask the same questions again and again.
             </p>
+
         </div>
 
         <div class="card">
+
             <div class="card-icon">⏰</div>
+
             <h3>Wasted Time</h3>
+
             <p>
-                Your team spends valuable time on repetitive work.
+                Your team spends hours handling repetitive work.
             </p>
+
         </div>
 
         <div class="card">
+
             <div class="card-icon">📉</div>
-            <h3>Lost Leads</h3>
+
+            <h3>Missed Leads</h3>
+
             <p>
-                Potential customers can be missed when nobody responds quickly.
+                Potential customers may be missed when responses are delayed.
             </p>
+
         </div>
 
     </div>
@@ -582,7 +794,7 @@
     <h2 class="title">Our AI Automation Services</h2>
 
     <p class="subtitle">
-        Simple automation solutions designed to help businesses work smarter.
+        Practical automation solutions designed around your business needs.
     </p>
 
     <div class="cards">
@@ -594,12 +806,11 @@
             <h3>AI Chatbots</h3>
 
             <p>
-                Answer common customer questions automatically
-                and provide information 24/7.
+                Chatbot solutions for FAQs, customer support,
+                information and lead collection.
             </p>
 
         </div>
-
 
         <div class="card service-card">
 
@@ -608,11 +819,11 @@
             <h3>Business Automation</h3>
 
             <p>
-                Automate repetitive business tasks and reduce manual work.
+                Reduce repetitive manual work by improving
+                everyday business workflows.
             </p>
 
         </div>
-
 
         <div class="card service-card">
 
@@ -621,10 +832,85 @@
             <h3>Lead Collection</h3>
 
             <p>
-                Collect customer information and organize potential leads.
+                Collect customer information and organize
+                inquiries more efficiently.
             </p>
 
         </div>
+
+        <div class="card service-card">
+
+            <div class="card-icon">📱</div>
+
+            <h3>WhatsApp Automation</h3>
+
+            <p>
+                Explore automation for customer questions,
+                inquiries and business communication.
+            </p>
+
+        </div>
+
+        <div class="card service-card">
+
+            <div class="card-icon">📊</div>
+
+            <h3>Data Automation</h3>
+
+            <p>
+                Simplify repetitive data collection and
+                organization processes.
+            </p>
+
+        </div>
+
+        <div class="card service-card">
+
+            <div class="card-icon">🔧</div>
+
+            <h3>Custom Solutions</h3>
+
+            <p>
+                Discuss your specific business process
+                and explore a suitable automation solution.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FREE AI AUDIT -->
+
+<section id="audit" class="audit">
+
+    <div class="audit-box">
+
+        <h2>🔍 Get a Free AI Automation Audit</h2>
+
+        <p>
+            Tell us about your business and we'll help identify
+            repetitive tasks that may be suitable for automation.
+        </p>
+
+        <div class="audit-list">
+
+            <div class="audit-item">✓ Repetitive Tasks</div>
+            <div class="audit-item">✓ Customer Messages</div>
+            <div class="audit-item">✓ Lead Handling</div>
+            <div class="audit-item">✓ Data Work</div>
+
+        </div>
+
+        <a
+            class="btn btn-primary"
+            href="https://wa.me/923193094040?text=Hello%2C%20I%20want%20a%20free%20AI%20automation%20audit%20for%20my%20business."
+            target="_blank"
+        >
+            Get My Free Audit
+        </a>
 
     </div>
 
@@ -638,7 +924,7 @@
     <h2 class="title">How It Works</h2>
 
     <p class="subtitle">
-        Getting started with AI automation is simple.
+        Getting started is simple.
     </p>
 
     <div class="steps">
@@ -650,35 +936,34 @@
             <h3>Tell Us Your Problem</h3>
 
             <p>
-                Tell us what repetitive task or business problem
+                Tell us about the task or business process
                 you want to improve.
             </p>
 
         </div>
 
-
         <div class="step">
 
             <div class="step-number">2</div>
 
-            <h3>We Build the Solution</h3>
+            <h3>We Plan the Solution</h3>
 
             <p>
-                We design an automation solution based on your business needs.
+                We discuss your requirements and identify
+                a suitable automation approach.
             </p>
 
         </div>
-
 
         <div class="step">
 
             <div class="step-number">3</div>
 
-            <h3>Start Saving Time</h3>
+            <h3>Build & Improve</h3>
 
             <p>
-                Your automation handles repetitive work while you focus
-                on your business.
+                We build the solution and improve it
+                according to your requirements.
             </p>
 
         </div>
@@ -695,50 +980,50 @@
     <h2 class="title">What Can We Automate?</h2>
 
     <p class="subtitle">
-        Examples of tasks businesses can improve with automation.
+        Examples of business tasks that may be suitable for automation.
     </p>
 
     <div class="cards">
 
         <div class="use-card">
-            <h3>WhatsApp Customer Replies</h3>
+            <h3>💬 Customer Replies</h3>
             <p>
-                Automatically handle common customer questions and requests.
+                Handle frequently asked customer questions.
             </p>
         </div>
 
         <div class="use-card">
-            <h3>Lead Follow-Ups</h3>
+            <h3>🎯 Lead Follow-Ups</h3>
             <p>
-                Organize leads and help businesses follow up with potential customers.
+                Organize leads and follow-up workflows.
             </p>
         </div>
 
         <div class="use-card">
-            <h3>Customer Support</h3>
+            <h3>📞 Customer Support</h3>
             <p>
-                Provide quick answers to frequently asked questions.
+                Provide faster answers to common questions.
             </p>
         </div>
 
         <div class="use-card">
-            <h3>Data Collection</h3>
+            <h3>📋 Data Collection</h3>
             <p>
-                Collect names, contact information and customer requirements.
+                Collect names, requirements and customer information.
             </p>
         </div>
 
         <div class="use-card">
-            <h3>Appointment Requests</h3>
+            <h3>📅 Appointment Requests</h3>
             <p>
-                Help customers submit appointment or service requests.
+                Help customers submit appointment requests.
             </p>
         </div>
 
         <div class="use-card">
-            <h3>Repetitive Tasks</h3>
+            <h3>⚙️ Repetitive Work</h3>
             <p>
-                Identify repetitive processes that may be suitable for automation.
+                Identify repetitive processes that could potentially be automated.
             </p>
         </div>
 
@@ -747,7 +1032,89 @@
 </section>
 
 
-<!-- WHY US -->
+<!-- DEMOS -->
+
+<section id="demos" class="demo">
+
+    <h2 class="title">Automation Demo Ideas</h2>
+
+    <p class="subtitle">
+        Examples of solutions we can demonstrate or build for businesses.
+    </p>
+
+    <div class="cards">
+
+        <div class="demo-card">
+
+            <div class="demo-label">DEMO</div>
+
+            <h3>🤖 Customer Support Bot</h3>
+
+            <p>
+                A chatbot that can answer common customer questions
+                and guide visitors toward contacting the business.
+            </p>
+
+            <a
+                class="price-btn"
+                href="https://wa.me/923193094040?text=Hello%2C%20I%20want%20to%20see%20the%20customer%20support%20bot%20demo."
+                target="_blank"
+            >
+                Request Demo
+            </a>
+
+        </div>
+
+
+        <div class="demo-card">
+
+            <div class="demo-label">DEMO</div>
+
+            <h3>🎯 Lead Collection System</h3>
+
+            <p>
+                A simple workflow for collecting customer details
+                and organizing potential leads.
+            </p>
+
+            <a
+                class="price-btn"
+                href="https://wa.me/923193094040?text=Hello%2C%20I%20want%20to%20see%20the%20lead%20collection%20demo."
+                target="_blank"
+            >
+                Request Demo
+            </a>
+
+        </div>
+
+
+        <div class="demo-card">
+
+            <div class="demo-label">DEMO</div>
+
+            <h3>⚙️ Business Workflow</h3>
+
+            <p>
+                A workflow designed to reduce repetitive manual
+                steps in everyday business operations.
+            </p>
+
+            <a
+                class="price-btn"
+                href="https://wa.me/923193094040?text=Hello%2C%20I%20want%20to%20see%20the%20business%20automation%20demo."
+                target="_blank"
+            >
+                Request Demo
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY -->
 
 <section>
 
@@ -766,17 +1133,17 @@
 
         <div class="why-item">
             <strong>✓ Faster Responses:</strong>
-            Give customers quicker answers.
+            Help customers get answers more quickly.
         </div>
 
         <div class="why-item">
-            <strong>✓ Capture More Leads:</strong>
-            Reduce the chance of missing customer inquiries.
+            <strong>✓ Organize Leads:</strong>
+            Make customer inquiries easier to manage.
         </div>
 
         <div class="why-item">
             <strong>✓ Work Smarter:</strong>
-            Let your team focus on more important tasks.
+            Give your team more time for important work.
         </div>
 
     </div>
@@ -788,11 +1155,11 @@
 
 <section id="pricing" class="pricing">
 
-    <h2 class="title">Simple Pricing</h2>
+    <h2 class="title">Simple Starting Pricing</h2>
 
     <p class="subtitle">
-        Every business has different requirements.
-        These are starting prices for basic solutions.
+        Final pricing depends on the features and requirements
+        of your project.
     </p>
 
     <div class="cards">
@@ -807,14 +1174,15 @@
             </div>
 
             <ul>
-                <li>✓ Basic AI Chatbot</li>
+                <li>✓ Basic Chatbot</li>
                 <li>✓ Basic Setup</li>
-                <li>✓ Customer Support</li>
+                <li>✓ Simple Automation</li>
             </ul>
 
             <a
                 class="price-btn"
-                href="https://wa.me/923193094040"
+                href="https://wa.me/923193094040?text=Hello%2C%20I%20am%20interested%20in%20the%20Starter%20automation%20package."
+                target="_blank"
             >
                 Discuss Project
             </a>
@@ -839,7 +1207,8 @@
 
             <a
                 class="price-btn"
-                href="https://wa.me/923193094040"
+                href="https://wa.me/923193094040?text=Hello%2C%20I%20am%20interested%20in%20the%20Professional%20automation%20package."
+                target="_blank"
             >
                 Discuss Project
             </a>
@@ -856,14 +1225,15 @@
             </div>
 
             <ul>
-                <li>✓ Advanced Automation</li>
+                <li>✓ Custom Automation</li>
+                <li>✓ Advanced Requirements</li>
                 <li>✓ Custom AI Solutions</li>
-                <li>✓ Business Requirements</li>
             </ul>
 
             <a
                 class="price-btn"
-                href="https://wa.me/923193094040"
+                href="https://wa.me/923193094040?text=Hello%2C%20I%20want%20to%20discuss%20a%20custom%20AI%20automation%20project."
+                target="_blank"
             >
                 Contact Us
             </a>
@@ -882,13 +1252,14 @@
     <h2>Ready to Automate Your Business?</h2>
 
     <p>
-        Tell us about your business and the tasks you want to automate.
-        We'll discuss a suitable solution with you.
+        Tell us what takes too much time in your business.
+        Let's discuss whether automation could help.
     </p>
 
     <a
         class="btn btn-primary"
-        href="https://wa.me/923193094040"
+        href="https://wa.me/923193094040?text=Hello%2C%20I%20want%20to%20discuss%20AI%20automation%20for%20my%20business."
+        target="_blank"
     >
         Start a Free Consultation
     </a>
@@ -912,38 +1283,44 @@
             <summary>What is AI automation?</summary>
 
             <p>
-                AI automation uses software and AI to handle repetitive
-                business tasks with less manual work.
+                AI automation uses software and AI tools to help
+                handle repetitive business tasks with less manual work.
             </p>
         </details>
-
 
         <details>
             <summary>What businesses can use automation?</summary>
 
             <p>
-                Many types of businesses can use automation,
-                depending on their processes and requirements.
+                Many types of businesses can use automation depending
+                on their processes, tasks and requirements.
             </p>
         </details>
-
 
         <details>
             <summary>Can you build a custom solution?</summary>
 
             <p>
                 Yes. Custom solutions can be discussed based on
-                your business requirements.
+                your specific business requirements.
             </p>
         </details>
 
+        <details>
+            <summary>Do you offer a free consultation?</summary>
+
+            <p>
+                Yes. You can contact us through WhatsApp to discuss
+                your business and automation requirements.
+            </p>
+        </details>
 
         <details>
             <summary>How do I get started?</summary>
 
             <p>
-                Contact us through WhatsApp and tell us what
-                you want to automate.
+                Send us a message on WhatsApp and tell us what
+                business task you want to automate.
             </p>
         </details>
 
@@ -959,7 +1336,7 @@
     <h2 class="title">Let's Talk About Your Business</h2>
 
     <p class="subtitle">
-        Send us your requirements and we'll contact you through WhatsApp.
+        Tell us what you want to automate and we'll contact you through WhatsApp.
     </p>
 
     <div class="contact">
@@ -1010,19 +1387,38 @@
 </footer>
 
 
+<!-- FLOATING WHATSAPP -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/923193094040"
+    target="_blank"
+    title="Contact us on WhatsApp"
+>
+    💬
+</a>
+
+
 <!-- CHATBOT -->
 
 <div class="chatbot">
 
     <div class="chat-header">
-        AI Assistant
+
+        🤖 AI Assistant
+
+        <div class="chat-status">
+            Online • Ask about our services
+        </div>
+
     </div>
 
     <div class="chat-body" id="chatBody">
 
         <p>
             <b>AI Assistant:</b>
-            Hello! Ask me about our services, pricing, or automation.
+            Hello! 👋 Ask me about our services, pricing,
+            chatbots or automation.
         </p>
 
     </div>
@@ -1047,6 +1443,8 @@
 
 <script>
 
+/* CONTACT FORM */
+
 function sendForm(event) {
 
     event.preventDefault();
@@ -1068,6 +1466,8 @@ function sendForm(event) {
 }
 
 
+/* CHATBOT */
+
 function sendChat() {
 
     let input = document.getElementById("chatInput");
@@ -1080,7 +1480,9 @@ function sendChat() {
     }
 
     chatBody.innerHTML +=
-        "<p><b>You:</b> " + message + "</p>";
+        "<p><b>You:</b> " +
+        escapeHTML(message) +
+        "</p>";
 
     let lower = message.toLowerCase();
 
@@ -1091,7 +1493,10 @@ function sendChat() {
         lower.includes("hi") ||
         lower.includes("hey")
     ) {
-        reply = "Hello! How can I help you today?";
+
+        reply =
+            "Hello! 👋 How can I help you with AI automation today?";
+
     }
 
     else if (
@@ -1099,71 +1504,115 @@ function sendChat() {
         lower.includes("pricing") ||
         lower.includes("cost")
     ) {
-        reply = "Our basic automation solutions start from $10. Contact us for a custom quote.";
+
+        reply =
+            "Our starting packages are $10 and $25. Custom projects depend on the requirements. You can contact us for a quote.";
+
     }
 
     else if (
         lower.includes("service") ||
         lower.includes("services")
     ) {
-        reply = "We provide AI Chatbots, Business Automation, Lead Collection, Customer Support automation and custom solutions.";
+
+        reply =
+            "We provide AI Chatbots, Business Automation, Lead Collection, WhatsApp Automation and Custom AI Solutions.";
+
     }
 
     else if (
         lower.includes("chatbot") ||
         lower.includes("bot")
     ) {
-        reply = "We can create chatbot solutions for customer support, FAQs and lead collection.";
+
+        reply =
+            "We can build chatbot solutions for FAQs, customer support, information and lead collection.";
+
     }
 
     else if (
         lower.includes("automation") ||
         lower.includes("automate")
     ) {
-        reply = "We help businesses automate repetitive tasks and improve customer workflows.";
+
+        reply =
+            "We help identify repetitive business tasks and explore automation solutions for them.";
+
     }
 
     else if (
         lower.includes("lead") ||
         lower.includes("leads")
     ) {
-        reply = "Our lead collection solutions can help businesses collect customer information and inquiries.";
+
+        reply =
+            "Our lead solutions can help collect customer information and organize inquiries.";
+
     }
 
     else if (
         lower.includes("whatsapp")
     ) {
-        reply = "We can discuss WhatsApp automation solutions. Contact us using the WhatsApp buttons on the website.";
+
+        reply =
+            "We can discuss WhatsApp automation and customer communication solutions. Use the WhatsApp button to contact us.";
+
+    }
+
+    else if (
+        lower.includes("audit") ||
+        lower.includes("free")
+    ) {
+
+        reply =
+            "You can request a free AI automation audit. We can discuss repetitive tasks and possible automation opportunities.";
+
+    }
+
+    else if (
+        lower.includes("demo") ||
+        lower.includes("example")
+    ) {
+
+        reply =
+            "We can discuss chatbot, lead collection and business workflow demos. Check the Demo section on the website.";
+
     }
 
     else if (
         lower.includes("contact") ||
         lower.includes("hire")
     ) {
-        reply = "You can contact us directly through WhatsApp for your project.";
+
+        reply =
+            "You can contact us directly through WhatsApp using any of the contact buttons.";
+
     }
 
     else if (
         lower.includes("help") ||
         lower.includes("support")
     ) {
-        reply = "Sure! Tell us what business task you want to automate.";
-    }
 
-    else if (
-        lower.includes("business")
-    ) {
-        reply = "We provide AI automation solutions for different types of businesses.";
+        reply =
+            "Sure! Tell me what business task you want to automate.";
+
     }
 
     else {
-        reply = "Thanks for your message! For a specific automation solution, contact us on WhatsApp and tell us about your business.";
+
+        reply =
+            "Thanks for your message! Tell us about your business task, or contact us on WhatsApp for a specific automation discussion.";
+
     }
+
 
     setTimeout(function() {
 
         chatBody.innerHTML +=
-            "<p><b>AI Assistant:</b> " + reply + "</p>";
+            "<p><b>AI Assistant:</b> " +
+            reply +
+            "</p>";
 
         chatBody.scrollTop = chatBody.scrollHeight;
 
@@ -1172,8 +1621,19 @@ function sendChat() {
     input.value = "";
 }
 
+
+/* SECURITY FOR CHAT TEXT */
+
+function escapeHTML(text) {
+
+    let div = document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+}
+
 </script>
 
 </body>
 </html>
-```
