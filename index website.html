@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Automation Agency</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #111827, #2563eb);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: white;
+            color: #2563eb;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .services,
+        .pricing {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card,
+        .price-card {
+            background-color: white;
+            padding: 30px;
+            width: 260px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        .card h3,
+        .price-card h3 {
+            color: #2563eb;
+            font-size: 22px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        .price {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .price-card ul {
+            list-style: none;
+            padding: 0;
+            line-height: 2;
+        }
+
+        .price-card .button {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        #contact {
+            background-color: #eaf0ff;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        form textarea {
+            height: 120px;
+        }
+
+        form button {
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        #chatbox {
+            width: 320px;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px #aaa;
+            overflow: hidden;
+        }
+
+        #chat-header {
+            background: #2563eb;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        #chat-messages {
+            height: 220px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        #user-input {
+            width: 65%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #chatbox button {
+            padding: 10px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 60px 15px;
+            }
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            header p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 45px 15px;
+            }
+
+            section h2 {
+                font-size: 27px;
+            }
+
+            .about {
+                font-size: 16px;
+            }
+
+            .card,
+            .price-card {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            #chatbox {
+                width: calc(100% - 30px);
+                right: 15px;
+                bottom: 15px;
+            }
+
+            #user-input {
+                width: calc(100% - 95px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>AI Automation Agency</h1>
+
+        <p>
+            We help businesses save time and grow with AI automation.
+        </p>
+
+        <a href="https://wa.me/92 3193094040"
+           class="button"
+           target="_blank">
+            WhatsApp Us
+        </a>
+
+    </header>
+
+
+    <!-- ABOUT US -->
+
+    <section>
+
+        <h2>About Us</h2>
+
+        <div class="about">
+
+            <p>
+                We are an AI Automation Agency focused on helping businesses
+                save time, reduce repetitive work, and improve customer support.
+            </p>
+
+            <p>
+                We provide simple AI solutions such as chatbots,
+                business automation, and lead collection.
+            </p>
+
+            <p>
+                Our goal is to make AI automation simple and affordable
+                for businesses of all sizes.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section>
+
+        <h2>Our Services</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>AI Chatbot</h3>
+                <p>
+                    Answer customer questions automatically using AI.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Business Automation</h3>
+                <p>
+                    Automate repetitive tasks and save valuable time.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Lead Collection</h3>
+                <p>
+                    Collect and organize potential customers automatically.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRICING -->
+
+    <section>
+
+        <h2>Simple Pricing</h2>
+
+        <div class="pricing">
+
+            <div class="price-card">
+                <h3>Starter</h3>
+
+                <div class="price">$10</div>
+
+                <p>Perfect for getting started</p>
+
+                <ul>
+                    <li>AI Chatbot</li>
+                    <li>Basic Setup</li>
+                    <li>Email Support</li>
+                </ul>
+
+                <a href="#contact" class="button">
+                    Get Started
+                </a>
+            </div>
+
+
+            <div class="price-card">
+                <h3>Professional</h3>
+
+                <div class="price">$25</div>
+
+                <p>For growing businesses</p>
+
+                <ul>
+                    <li>AI Chatbot</li>
+                    <li>Business Automation</li>
+                    <li>Lead Collection</li>
+                </ul>
+
+                <a href="#contact" class="button">
+                    Get Started
+                </a>
+            </div>
+
+
+            <div class="price-card">
+                <h3>Business</h3>
+
+                <div class="price">$50</div>
+
+                <p>For complete automation</p>
+
+                <ul>
+                    <li>Advanced AI</li>
+                    <li>Full Automation</li>
+                    <li>Priority Support</li>
+                </ul>
+
+                <a href="#contact" class="button">
+                    Get Started
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <h2>Let's Automate Your Business</h2>
+
+        <p>
+            Contact us to learn how AI can help your business.
+        </p>
+
+        <form onsubmit="sendForm(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit" class="button">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <footer>
+
+        <p>© 2026 AI Automation Agency</p>
+
+    </footer>
+
+
+    <!-- CHATBOT -->
+
+    <div id="chatbox">
+
+        <div id="chat-header">
+            AI Assistant
+        </div>
+
+        <div id="chat-messages">
+            <p><b>AI:</b> Hi! How can I help you?</p>
+        </div>
+
+        <input
+            type="text"
+            id="user-input"
+            placeholder="Ask me anything..."
+            onkeypress="handleEnter(event)"
+        >
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
+
+
+    <script>
+
+        function sendForm(event) {
+
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            let whatsappNumber = "92 3193094040";
+
+            let text =
+                "New Customer Message%0A%0A" +
+                "Name: " + encodeURIComponent(name) + "%0A" +
+                "Email: " + encodeURIComponent(email) + "%0A" +
+                "Message: " + encodeURIComponent(message);
+
+            let whatsappURL =
+                "https://wa.me/" + whatsappNumber + "?text=" + text;
+
+            window.open(whatsappURL, "_blank");
+
+            event.target.reset();
+        }
+
+
+        function handleEnter(event) {
+
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+
+        }
+
+
+        function sendMessage() {
+
+            let input = document.getElementById("user-input");
+
+            let message = input.value.trim();
+
+            if (message === "") {
+                return;
+            }
+
+            let chat = document.getElementById("chat-messages");
+
+            chat.innerHTML +=
+                "<p><b>You:</b> " + message + "</p>";
+
+            let lowerMessage = message.toLowerCase();
+
+            let reply = "";
+
+
+            if (
+                lowerMessage.includes("hello") ||
+                lowerMessage.includes("hi") ||
+                lowerMessage.includes("hey")
+            ) {
+                reply = "Hello! Welcome to our AI Automation Agency. How can I help you?";
+            }
+
+            else if (
+                lowerMessage.includes("price") ||
+                lowerMessage.includes("pricing") ||
+                lowerMessage.includes("cost")
+            ) {
+                reply = "Our plans start from $10. Starter $10, Professional $25, and Business $50.";
+            }
+
+            else if (
+                lowerMessage.includes("service") ||
+                lowerMessage.includes("services")
+            ) {
+                reply = "We provide AI Chatbots, Business Automation, and Lead Collection.";
+            }
+
+            else if (
+                lowerMessage.includes("chatbot") ||
+                lowerMessage.includes("bot")
+            ) {
+                reply = "Our AI Chatbot can answer customer questions and help automate customer support.";
+            }
+
+            else if (
+                lowerMessage.includes("automation") ||
+                lowerMessage.includes("automate")
+            ) {
+                reply = "We automate repetitive business tasks to help save time and improve efficiency.";
+            }
+
+            else if (
+                lowerMessage.includes("contact") ||
+                lowerMessage.includes("whatsapp")
+            ) {
+                reply = "You can contact us through the WhatsApp button on this website.";
+            }
+
+            else if (
+                lowerMessage.includes("support") ||
+                lowerMessage.includes("help")
+            ) {
+                reply = "Sure! Tell me what you need help with, and I'll guide you.";
+            }
+
+            else if (
+                lowerMessage.includes("business")
+            ) {
+                reply = "We help businesses use AI to automate customer support, repetitive tasks, and lead collection.";
+            }
+
+            else {
+                reply = "Thanks for your question! For detailed information, please contact us through WhatsApp.";
+            }
+
+
+            setTimeout(function() {
+
+                chat.innerHTML +=
+                    "<p><b>AI:</b> " + reply + "</p>";
+
+                chat.scrollTop = chat.scrollHeight;
+
+            }, 500);
+
+
+            input.value = "";
+
+            chat.scrollTop = chat.scrollHeight;
+
+        }
+
+    </script>
+
+</body>
+</html>
